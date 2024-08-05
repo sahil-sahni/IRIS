@@ -19,7 +19,7 @@ devtools::install_github("sahil-sahni/5. Package(s)/IRIS")
 ```
 
 ### **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm
-<img src="" alt="grouping">
+<img src="https://github.com/sahil-sahni/IRIS/blob/1758c9455b96171c0ccffcdd8fa00e27d5199914/4.%20Figure/images/SOCIAL%20%5Bnc%20acc%5D.png" alt="grouping">
 
 We developed an R method, **SOCIAL** (**S**ingle-cell transcript**O**mics **C**ell-cell **I**nteraction **AL**gorithm), to identify significant ligand-receptor interactions between two specific cell types, drawing upon insights from Kumar et al.'s (https://pubmed.ncbi.nlm.nih.gov/30404002/), Vento-Tormo et al.'s (https://pubmed.ncbi.nlm.nih.gov/30429548/), and our own [LIRICS](https://pubmed.ncbi.nlm.nih.gov/34983745/) framework. Our decision to create our own code stemmed from four primary motivations: 1. Leveraging the strengths of previous methods: By combining aspects of the three approaches, we aimed to maximize the accuracy and robustness of our ligand-receptor interaction predictions. 2. Implementing an R-based solution: While the first method lacked publicly accessible code and the second was in Python, we sought to create an R-based solution for accessibility and ease of use. 3. Incorporating our comprehensive database: Our ligand-receptor interaction database (LIRICS) provided rich and informative annotations, enhancing the depth of our analysis. 4. Accommodating variations in ligand-receptor interaction activity observed across patients.
 
