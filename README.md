@@ -19,7 +19,7 @@ devtools::install_github("sahil-sahni/5. Package(s)/IRIS")
 ```
 
 ### **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm
-<img src="https://github.com/sahil-sahni/IRIS/4. Figure/images/SOCIAL [nc acc].png" alt="grouping">
+<img src="[https://github.com/sahil-sahni/IRIS/4. Figure/images/SOCIAL [nc acc].png](https://github.com/sahil-sahni/IRIS/blob/7ab6f9c3173397d3a0bd3606c024ef8d8a7d9c1b/4.%20Figure/images/SPECIAL%20%5Bnc%20acc%5D.png)" alt="grouping">
 
 We developed an R method, **SOCIAL** (**S**ingle-cell transcript**O**mics **C**ell-cell **I**nteraction **AL**gorithm), to identify significant ligand-receptor interactions between two specific cell types, drawing upon insights from Kumar et al.'s (https://pubmed.ncbi.nlm.nih.gov/30404002/), Vento-Tormo et al.'s (https://pubmed.ncbi.nlm.nih.gov/30429548/), and our own [LIRICS](https://pubmed.ncbi.nlm.nih.gov/34983745/) framework. Our decision to create our own code stemmed from four primary motivations: 1. Leveraging the strengths of previous methods: By combining aspects of the three approaches, we aimed to maximize the accuracy and robustness of our ligand-receptor interaction predictions. 2. Implementing an R-based solution: While the first method lacked publicly accessible code and the second was in Python, we sought to create an R-based solution for accessibility and ease of use. 3. Incorporating our comprehensive database: Our ligand-receptor interaction database (LIRICS) provided rich and informative annotations, enhancing the depth of our analysis. 4. Accommodating variations in ligand-receptor interaction activity observed across patients.
 
@@ -28,7 +28,7 @@ SOCIAL comprises three main steps: 1. Querying the LIRICS database: Initially, w
 See **Tutorial** & **Package** here: XXXX
 
 ### **SP**atial c**E**ll-**C**ell **I**nteraction **AL**gorithm
-<img src="https://github.com/sahil-sahni/IRIS/4. Figure/images/SOCIAL [nc acc].png" alt="grouping">
+<img src="[https://github.com/sahil-sahni/IRIS/4. Figure/images/SOCIAL [nc acc].png](https://github.com/sahil-sahni/IRIS/blob/7ab6f9c3173397d3a0bd3606c024ef8d8a7d9c1b/4.%20Figure/images/SOCIAL%20%5Bnc%20acc%5D.png)" alt="grouping">
 
 To quantify the activity of cell-type-specific ligand-receptor interactions within each spatial transcriptomics slide, we further developed our in-house single-cell ligand-receptor inference tool called SOCIAL, into SPECIAL (**SP**atial c**E**ll-**C**ell **I**nteraction **AL**gorithm). This novel iteration is customized specifically for spatial transcriptomics with aligned single-cell transcriptomes, the direct output of CytoSPACE (see above). It consists of three major steps: Step I utilizes either a sliding window or k-means clustering approach on bulk (i.e. Visium 10X and Legacy) and SlideSeqV2 spatial transcriptomics, respectively, to divide spatial slides into “regions” of approximately 250 μm in diameter. Step II employs SOCIAL steps 1 through 3 to infer cell-type-specific interaction activity within each ~250 μm region. Step III, ligand-receptor interactions are further denoted as significantly activated if the average expression levels of both the ligand and receptor genes within the respective cell type is greater than the median across all regions. The final output of SPECIAL is a cell-type-specific ligand-receptor interaction activity profile across all regions in a spatial transcriptomics slide.
 
