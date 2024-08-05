@@ -4,7 +4,7 @@ Code repository to reproduce the results and findings that are published in:
 Sahni et al. "A machine learning model reveals expansive downregulation of ligand-receptor interactions enhancing lymphocyte infiltration in melanoma with acquired resistance to Immune Checkpoint Blockade. *N C* **X**, XXXX (XXXX). https://doi.org
 
 ### **I**mmunotherapy **R**esistance *cell-cell* **I**nteraction **S**canner
-<img src="https://github.com/sahil-sahni/IRIS/blob/7ab6f9c3173397d3a0bd3606c024ef8d8a7d9c1b/4.%20Figure/images/SPECIAL%20%5Bnc%20acc%5D.png" alt="grouping">
+<img src="https://github.com/sahil-sahni/IRIS/blob/e0770f9f6dc76a26379c371fa8943b0b81c56a0f/4.%20Figure/images/IRIS%20figure%201%20Final%20Version%20%5Bnc%20acc%5D.pdf" alt="grouping">
 
 We developed **I**mmunotherapy **R**esistance cell-cell **I**nteraction **S**canner (IRIS), a computational method specifically designed to identify immune checkpoint blockade (ICB) resistance relevant ligand-receptor interactions in the tumor microenvironment (TME), given a patients cohort including tumor bulk expression data and ICB treatment response data. The gene expression data is deconvolved using [**CODEFACS**](https://pubmed.ncbi.nlm.nih.gov/34983745/) such that the input to IRIS in a given patients cohort is comprised of two components: 1. Literature-curated cell-type-specific ligand-receptor interaction activity profiles (denoting either activation: 1 or inactivation: 0) in each tumor sample, which is inferred using [**LIRICS**](https://pubmed.ncbi.nlm.nih.gov/34983745/) from the deconvolved expression – an interaction is considered as activated if the (deconvolved) expression of both its ligand and receptor genes is above their median expression values across the cohort samples, and inactivated otherwise;  2. The corresponding ICB response outcome for each patient. 
 
@@ -19,7 +19,7 @@ devtools::install_github("sahil-sahni/5. Package(s)/IRIS")
 ```
 
 ### **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm
-<img src="[https://github.com/sahil-sahni/IRIS/4. Figure/images/SOCIAL [nc acc].png](https://github.com/sahil-sahni/IRIS/blob/7ab6f9c3173397d3a0bd3606c024ef8d8a7d9c1b/4.%20Figure/images/SPECIAL%20%5Bnc%20acc%5D.png)" alt="grouping">
+<img src="" alt="grouping">
 
 We developed an R method, **SOCIAL** (**S**ingle-cell transcript**O**mics **C**ell-cell **I**nteraction **AL**gorithm), to identify significant ligand-receptor interactions between two specific cell types, drawing upon insights from Kumar et al.'s (https://pubmed.ncbi.nlm.nih.gov/30404002/), Vento-Tormo et al.'s (https://pubmed.ncbi.nlm.nih.gov/30429548/), and our own [LIRICS](https://pubmed.ncbi.nlm.nih.gov/34983745/) framework. Our decision to create our own code stemmed from four primary motivations: 1. Leveraging the strengths of previous methods: By combining aspects of the three approaches, we aimed to maximize the accuracy and robustness of our ligand-receptor interaction predictions. 2. Implementing an R-based solution: While the first method lacked publicly accessible code and the second was in Python, we sought to create an R-based solution for accessibility and ease of use. 3. Incorporating our comprehensive database: Our ligand-receptor interaction database (LIRICS) provided rich and informative annotations, enhancing the depth of our analysis. 4. Accommodating variations in ligand-receptor interaction activity observed across patients.
 
