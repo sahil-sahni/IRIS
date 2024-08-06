@@ -4,6 +4,8 @@ Code to reproduce the results of existing biomarkers of ICB response. The TPM ca
 To reproduce the bulk transcriptomics results for Auslander et al., counts data was first converted to TPM following this code:
 
 ```r
+library(tidyverse)
+
 #Auslander et al. 2018
 a2018 = read.csv('GSE115821_MGH_counts.csv', check.names = F) #from GEO GSE115821
 a2018_count = a2018[,7:43]
@@ -19,6 +21,9 @@ To reproduce the bulk transcriptomics results for PUCH, FPKM data was first conv
 
 ```r
 #PUCH
+library(parallel)
+library(tidyverse)
+
 puch <- read.csv("melanoma_puch_exp.csv") # from Cui et al. 
 puch_gene = puch %>% dplyr::select(Gene=X)
 puch_fpkm = (2^(puch[,-1]))-1
