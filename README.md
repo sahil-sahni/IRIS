@@ -44,6 +44,7 @@ devtools::install_github("sahil-sahni/5. Package(s)/SOCIAL")
 The CODEFACS, LIRICS, SOCIAL, CytoSPACE, and SPECIAL data (and relevant data) generated in this study have been deposited to XX.
 
 ## Folders
+0. **Data**: details regarding data files from zenodo
 1. **IRIS**: code to reproduce results for **I**mmunotherapy **R**esistance *cell-cell* **I**nteraction **S**canner
 2. **Benchmark**: code to reproduce results for previously established transcriptomics biomarkers' of ICB
 3. **SOCIAL & SPECIAL**: code to reproduce results for **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm and **SP**atial c**E**ll-**C**ell **I**nteraction **AL**gorithm
@@ -60,5 +61,20 @@ If using IRIS, SOCIAL, SPECIAL, or any of the pertaining results, please cite:
 
 Sahni et al. "A machine learning model reveals expansive downregulation of ligand-receptor interactions enhancing lymphocyte infiltration in melanoma with acquired resistance to Immune Checkpoint Blockade. *N C* **X**, XXXX (XXXX). https://doi.org
 
+## Author(s)
+* Sahil Sahni (sahil-sahni)
+* Binbin Wang
+* Di Wu
+* Saugato Rahman Dhruba
+* Matthew Nagy
+* Sushant Patkar
+* Ingrid Ferreira
+* Chi-Ping Day
+* Kun Wang
+* Eytan Ruppin
+
 ## Corresponding Author(s)
-Kun Wang (kun.wang@nih.gov) and Eytan Ruppin (eytan.ruppin@nih.gov)
+**Kun Wang** (kun.wang@nih.gov) and **Eytan Ruppin** (eytan.ruppin@nih.gov)
+
+## Acknowledgement(s)
+IRIS, SOCIAL, and SPECIAL figures were created with BioRender.com 
