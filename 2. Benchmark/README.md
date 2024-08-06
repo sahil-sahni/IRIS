@@ -1,4 +1,4 @@
-Code to reproduce the results of existing biomarkers of ICB response. 
+Code to reproduce the results of existing biomarkers of ICB response. The TPM calculation for Auslander et al. and PUCH were used for both ICB tool benchmarking and CODEFACS deconvolution.
 
 **Auslander et al.**
 To reproduce the bulk transcriptomics results for Auslander et al., counts data was first converted to TPM following this code:
