@@ -74,7 +74,7 @@ RDS_df = lapply(1:length(input), function(x){
 res = do.call(rbind,RDS_df)
 
 #res_tcd8 = subset(res, slide != 'background') 
-res = res %>% mutate(patient = substr(name, 1, nchar(name) - 2)) %>% subset(!(name %in% c('MBM13.1','MBM07.1','ECM08.1'))) %>% mutate(group=ifelse(patient %in% c('ECM06','ECM10'),'PD','naïve'))
+res = res %>% mutate(patient = substr(name, 1, nchar(name) - 2)) %>% subset(!(name %in% c('MBM13.1','MBM07.1','ECM08.1'))) %>% mutate(group=ifelse(patient %in% c('XX','XX'),'PD','naïve')) #XX information was retrieved from Ben Izar's Group
 
 ## ------- Figure 5E Boxplot score between spatial spots with and without cd8 infiltration patient level -------
 stat.test = res %>% mutate(ti=`TCD8 infiltration`) %>% group_by(patient) %>% rstatix::wilcox_test(active_RDI ~ ti, ref.group = '1', alternative = 'greater')
@@ -117,17 +117,23 @@ plot(fig5f)
 
 ## ------- Figure 5G Boxplot score between spatial spots in resistant vs naive patient level -------
 ## slide specific may delete 
-res_patientlvl = res %>% group_by(patient, group) %>% dplyr::summarise(active_RDI=sum(active_RDI))
+res_patientlvl = res %>% group_by(patient, group, name) %>% dplyr::summarise(active_RDI=sum(active_RDI)) %>% 
+  ungroup() %>% group_by(patient, group) %>% dplyr::summarise(active_RDI=mean(active_RDI))
 stat.test = wilcox.test(active_RDI ~ group, res_patientlvl, alternative='g')
 stat.test = data.frame(group1=c('naïve'), group2=c('PD'), p=round(stat.test$p.value,2))
 
-fig5g = ggviolin(res_patientlvl, x='group', y='active_RDI', fill='group',size=0.3) + 
-  theme(legend.position = 'None', axis.title.x = element_blank(), axis.text.x = element_text(angle=-30,hjust=0))
-fig5g = fig5g +
-  stat_pvalue_manual(stat.test,  label = "p", tip.length = .02, y.position=600, bracket.size = 0.3, size=10/.pt)+
+fig5g=ggplot(res_patientlvl, aes(x=group, y=active_RDI, fill=group, color=group), size=0.3)+
+  geom_violin(trim=FALSE, fill=NA, show.legend = F)+
+  geom_boxplot(width=0.3, color='black', show.legend = F)+
+  theme_pubr()+
+  xlab(NULL)+
+  ylab('# of active RDIs')+
   scale_y_continuous(expand = expansion(mult = c(0, 0.1)), labels=label_number(accuracy=1))+
   scale_fill_manual(values=c('#D0759F','#88BECD'))+
-  ylab('# of active RDIs')
+  scale_color_manual(values=c('#D0759F','#88BECD'))+
+  theme(plot.title = element_text(hjust = 0.5),)+
+  stat_compare_means(ref.group='naïve', paired=F, method='wilcox.test', method.args = list(alternative = "greater"), bracket.size = 0.4, label='p', 
+                     comparisons = list(c('naïve','PD')), tip.length = 0.03, size=10/.pt, label.y=350)
 plot(fig5g)
 
 ## ------- Figure 8AB Spatial Map -------
