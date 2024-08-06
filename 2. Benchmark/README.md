@@ -1,6 +1,6 @@
 Code to reproduce the results of existing biomarkers of ICB response. The TPM calculation for Auslander et al. and PUCH were used for both ICB tool benchmarking and CODEFACS deconvolution.
 
-**Auslander et al.**
+**Auslander et al.**:
 To reproduce the bulk transcriptomics results for Auslander et al., counts data was first converted to TPM following this code:
 
 ```r
@@ -14,7 +14,7 @@ a2018_tpm <- t( t(x) * 1e6 / colSums(x) )
 a2018_final = cbind(a2018_gene, a2018_tpm)
 ```
 
-**PUCH**
+**PUCH**:
 To reproduce the bulk transcriptomics results for PUCH, FPKM data was first converted to TPM following this code:
 
 ```r
@@ -33,5 +33,5 @@ colSums(puch_tpm)
 puch_tpm = cbind(puch_gene, puch_tpm)
 ```
 
-**Thrane et al.**
+**Thrane et al.**:
 To reproduce the bulk transcriptomics results for Thrane et al., counts data was first converted to TPM using in-house code. In brief, counts data was converted to TPM using gene lengths from GRCh37.87. Duplicate genes and non-protein coding genes were removed, and data was renormalized to TPM with unique pcg.
