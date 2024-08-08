@@ -49,7 +49,7 @@ The CODEFACS, LIRICS, SOCIAL, CytoSPACE, and SPECIAL data (and relevant data) ge
 2. **Benchmark**: code to reproduce results for previously established transcriptomics biomarkers' of ICB
 3. **SOCIAL & SPECIAL**: code to reproduce results for **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm and **SP**atial c**E**ll-**C**ell **I**nteraction **AL**gorithm
 4. **Figure**: code to reproduce figures and results
-5. **Package(s)**: R packages for user implementation of **IRIS**, **SOCIAL**, and **SPECIAL** in their own work
+5. **Package(s)** **[coming soon]**: R packages for user implementation of **IRIS**, **SOCIAL**, and **SPECIAL** in their own work
     a. **IRIS** R package with vignettes
     b. **SOCIAL** R package (includes SPECIAL) with vignettes
 
