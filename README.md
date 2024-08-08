@@ -50,8 +50,8 @@ The CODEFACS, LIRICS, SOCIAL, CytoSPACE, and SPECIAL data (and relevant data) ge
 3. **SOCIAL & SPECIAL**: code to reproduce results for **S**ingle-cell transcrip**O**mics **C**ell-cell **I**nteraction **AL**gorithm and **SP**atial c**E**ll-**C**ell **I**nteraction **AL**gorithm
 4. **Figure**: code to reproduce figures and results
 5. **Package(s)** **[coming soon]**: R packages for user implementation of **IRIS**, **SOCIAL**, and **SPECIAL** in their own work
-    a. **IRIS** R package with vignettes
-    b. **SOCIAL** R package (includes SPECIAL) with vignettes
+    1. **IRIS** R package with vignettes
+    2. **SOCIAL** R package (includes SPECIAL) with vignettes
 
 ## System requirements
 IRIS, SOCIAL, and SPECIAL were developed on R (v4.4.1) using R packages: dplyr (v1.1.4), magrittr (v2.0.3), parallel (v4.4.1), pROC (v1.18.5), rBayesianOptimization (v1.2.1), tidyr (v1.3.1), abind (v1.4-5), Matrix (v1.7-0),  urr (v1.0.2), reshape2 (1.4.4), rslurm (v0.6.2), and stats (v4.4.1). All statistical analyses were done on R (v4.4.1).
