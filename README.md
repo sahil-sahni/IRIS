@@ -54,7 +54,7 @@ The CODEFACS, LIRICS, SOCIAL, CytoSPACE, and SPECIAL data (and relevant data) ge
     b. **SOCIAL** R package (includes SPECIAL) with vignettes
 
 ## System requirements
-Code was tested using R version 4.4.1 (2024-08-04)
+IRIS, SOCIAL, and SPECIAL were developed on R (v4.4.1) using R packages: dplyr (v1.1.4), magrittr (v2.0.3), parallel (v4.4.1), pROC (v1.18.5), rBayesianOptimization (v1.2.1), tidyr (v1.3.1), abind (v1.4-5), Matrix (v1.7-0),  urr (v1.0.2), reshape2 (1.4.4), rslurm (v0.6.2), and stats (v4.4.1). All statistical analyses were done on R (v4.4.1).
 
 ## Citation
 If using IRIS, SOCIAL, SPECIAL, or any of the pertaining results, please cite:
