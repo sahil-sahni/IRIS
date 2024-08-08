@@ -81,4 +81,4 @@ Sahni et al. "A machine learning model reveals expansive downregulation of ligan
 **Sahil Sahni** (sahnis1@mskcc.org) #new institution
 
 ## Acknowledgement(s)
-IRIS, SOCIAL, and SPECIAL figures were created with BioRender.com 
+IRIS, SOCIAL, and SPECIAL figures were created with BioRender.com. IRIS figure was developed by Di Wu, PhD.
